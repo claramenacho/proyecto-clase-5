@@ -3,3 +3,40 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: lighter;
+    line-height: 1.6; /*INTERLINEADO*/
+    font-style: italic;
+}
+
+/*DISPLAY-----> HACE REFERENCIA A CÓMO SE COMPORTA UN ELEMENTO EN EL FLUJO DE UN DOCUMENTO*/
+
+
+/*El h1 tiene por defecto un display block, es decir, ocupa el 100% del ancho disponible del elemento padre (en este caso el h1 se encuentra dentro del body, y éste es su padre)!!!*/
+h1 {
+    background-color: aqua;
+    display: block;
+}
+
+button {
+    background-color: blue;  /*ocupa todo el espacio que ocupa el contenido*/
+    display: inline; /*ocupan el contenido en la linea donde se declaran, sirven para botones y para texto tmb*/
+}
+
+/*La estiqueta span me permite seleccionar una palabra o parte del texto*/
+
+span {
+    color:chocolate;
+    font-weight: bold;
+    display: inline;
+    background-color: darkgreen;
+}
+
