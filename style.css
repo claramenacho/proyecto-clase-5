@@ -1,4 +1,4 @@
-* {
+/** {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,29 +14,97 @@ p {
     font-size: 12px;
     font-weight: lighter;
     line-height: 1.6; /*INTERLINEADO*/
-    font-style: italic;
+    /*font-style: italic;
 }
 
 /*DISPLAY-----> HACE REFERENCIA A CÓMO SE COMPORTA UN ELEMENTO EN EL FLUJO DE UN DOCUMENTO*/
 
 
 /*El h1 tiene por defecto un display block, es decir, ocupa el 100% del ancho disponible del elemento padre (en este caso el h1 se encuentra dentro del body, y éste es su padre)!!!*/
-h1 {
+/*h1 {
     background-color: aqua;
     display: block;
 }
 
 button {
-    background-color: blue;  /*ocupa todo el espacio que ocupa el contenido*/
-    display: inline; /*ocupan el contenido en la linea donde se declaran, sirven para botones y para texto tmb*/
+    background-color: blue;  /*ocupa todo el espacio que ocupa el contenido*//*
+    display: inline; /*ocupan el contenido en la linea donde se declaran, sirven para botones y para texto tmb*//*
 }
 
 /*La estiqueta span me permite seleccionar una palabra o parte del texto*/
 
+/*span {
+    color:chocolate;
+    font-weight: bold;
+    display: inline; /*aca esta en linea por lo tanto va a seguir la linea del texto, que solo ocupa el ancho del contenido, en esta caso de una sola palabra*//*
+    background-color: darkgreen;
+}*/
+/*Pero si en lugar de colocar inline, le ponemos block, va a ocupar todo lo que ocupa el elemento padre, entonces se va a ir hacia abajo la palabra.
+
 span {
     color:chocolate;
     font-weight: bold;
-    display: inline;
-    background-color: darkgreen;
+    display: inline; /*acá está en línea por lo tanto va a seguir la línea del texto*/
+    /*background-color: darkgreen;*/
+/*}*/
+
+/*DISPLAY FLEX---> define cómo se comporta el flujo de mi documento, es para modificar columnas o filas*/
+
+/*DISPLAY GRID ---> es para modificar filas y columnas (matriz)*/
+
+
+/*El display flex se le agrega o se le indica al elemento padre de lo que yo quiero modificar, ejemplo: si quiero modificar los div, tengo que ver quien es el padre, en este caso es la section.*/
+
+/*El display flex me permite modificar los contenedores hijos, con justify content*/
+
+
+section {
+    background-color: bisque;
+    padding: 20px;
+    display: flex;   /*cambia el eje principal, el eje principal por defecto es el "y"*/
+    justify-content: space-between;
+
 }
+
+
+div {
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: -5px 5px 18px 5px rgba(89,89,89,0.73);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+/*Acá estoy especificando el h2 de ambos div*/
+div h1 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 400px;
+}
+
+div h2 {
+    text-align: center;
+    font-weight: lighter;
+    font-style: italic;
+    text-decoration: underline;
+
+}
+
+p {
+    color: gray;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+div button {
+    border: none;
+    background-color: aliceblue;
+    padding: 8px 16px;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+
+
 
