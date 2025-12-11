@@ -61,8 +61,34 @@ span {
 section {
     background-color: bisque;
     padding: 20px;
-    display: flex;   /*cambia el eje principal, el eje principal por defecto es el "y"*/
-    justify-content: space-between;
+    /*display: flex;  
+     /*cambia el eje principal, el eje principal por defecto es el "y"*/
+    /*justify-content: space-evenly;
+    /*align-item cambia el eje secundario, es este caso es el eje "x"*/
+    /*EL ALTO DE UN CONTENEDOR LO DEFINE EL CONTENIDO*/
+    /*Viewpoint height, es el alto de la ventana*/
+    /*height: 100vh;*/
+    /*align-items: center;*/
+
+/*Cuando tenemos una mayor cantidad de cartas o div, ya no se puede usar display flex porque no funcionaria, ya que éste solamente trabaja en un eje u otro. Como solución tenemos el display grip que trabaja en una grilla (matriz)*/
+
+
+    /*Si yo necesito que se adapte al contenido tengo que cambiar a min-height (porque es el minimo que yo quiero que tenga)*/
+    min-height: 100vh;
+    display: grid;    
+
+    /*Como generar columnas*/
+
+    /*Una fraccion equitativamente hablando*/
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    
+
+    /*Para que se separen entre ellos*/
+
+    gap: 10px;
+
 
 }
 
@@ -73,14 +99,14 @@ div {
     border-radius: 10px;
     box-shadow: -5px 5px 18px 5px rgba(89,89,89,0.73);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
+    
 }
 /*Acá estoy especificando el h2 de ambos div*/
 div h1 {
     font-size: 18px;
     text-align: center;
     margin-bottom: 10px;
-    width: 400px;
+    
 }
 
 div h2 {
@@ -95,6 +121,7 @@ p {
     color: gray;
     font-size: 15px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 div button {
